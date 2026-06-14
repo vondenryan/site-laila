@@ -1,0 +1,372 @@
+/* ── RESET ── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── BASE ── */
+body {
+    overflow-x: hidden;
+    background: #0b0b0b;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ── HERO ── */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=2000&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.15);
+    animation: zoom 12s ease-out forwards;
+    z-index: 0;
+}
+
+@keyframes zoom {
+    to { transform: scale(1); }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards .6s;
+}
+
+@keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    animation: appear 1s forwards 1.5s, float 2s infinite 2.5s;
+}
+
+@keyframes appear { to { opacity: 1; } }
+
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+.arrow { font-size: 2rem; }
+
+/* ── STORY ── */
+.story-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    z-index: 0;
+}
+
+.story-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    white-space: nowrap;
+}
+
+.line {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin: 20px 0;
+}
+
+.highlight { color: #1db954; }
+
+/* ── ABOUT ── */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top, #1db95422, transparent 70%),
+        radial-gradient(circle at bottom, #0b0b0b, transparent 80%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.about-content {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 70px 0;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.about-item.reverse { flex-direction: row-reverse; }
+
+.about-item.highlight-item {
+    justify-content: center;
+    text-align: center;
+}
+.about-item.highlight-item p {
+    font-size: 1.6rem;
+    color: #1db954;
+    font-weight: 500;
+}
+
+.img-wrap {
+    width: 45%;
+    max-width: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(29,185,84,0.15);
+    flex-shrink: 0;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: saturate(1.1) contrast(1.05);
+    transition: transform .6s ease;
+    display: block;
+}
+
+.img-wrap img:hover { transform: scale(1.05); }
+
+.about-item p {
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .about-item,
+    .about-item.reverse { flex-direction: column; text-align: center; }
+    .img-wrap { width: 100%; }
+}
+
+/* ── PREP MAP ── */
+.prep-map-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.prep-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.prep-line {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin: 30px 0;
+    opacity: 0;
+}
+
+/* ── MAP SECTION ── */
+.map-section {
+    min-height: 100vh;
+    background: #0b0b0b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 20px 60px;
+    gap: 32px;
+}
+
+.map-intro {
+    text-align: center;
+}
+
+.map-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 8px;
+}
+
+.map-intro p {
+    font-size: .95rem;
+    opacity: .5;
+    letter-spacing: 1px;
+}
+
+/* container do SVG */
+.map-wrapper {
+    width: 100%;
+    max-width: 680px;
+}
+
+.map-loading {
+    text-align: center;
+    opacity: .4;
+    padding: 40px;
+}
+
+/* SVG base */
+.map-wrapper svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible; /* garante que drop-shadow não seja cortado */
+}
+
+/* Todos os estados: fill e stroke via CSS como fallback */
+.map-wrapper svg path[id^="BR"],
+.map-wrapper svg circle[id^="BR"] {
+    fill: #1e2a1e;
+    stroke: #2e3f2e;
+    stroke-width: 0.8px;
+    cursor: pointer;
+    /* transitions de fill e filter são gerenciados pelo JS inline,
+       mas deixamos transition para suavidade do mouseenter/mouseleave */
+    transition: fill .2s ease, filter .2s ease;
+}
+
+/* Estados com música: tom levemente diferente como dica visual */
+.map-wrapper svg path.has-song,
+.map-wrapper svg circle.has-song {
+    fill: #1a3320;
+    stroke: #1db95430;
+}
+
+/* Círculos dos estados pequenos: raio mínimo visível */
+.map-wrapper svg circle[id^="BR"] {
+    r: 8;
+    stroke-width: 1.5px;
+}
+
+/* ── PAINEL DE INFO ── */
+.map-info {
+    width: 100%;
+    max-width: 680px;
+    background: #111;
+    border: 1px solid #1db95430;
+    border-radius: 16px;
+    padding: 24px 28px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .4s ease, transform .4s ease;
+    pointer-events: none;
+}
+
+.map-info.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.map-info-inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.map-info-flag {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.state-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.song-name {
+    font-size: 1rem;
+    color: #1db954;
+    font-weight: 500;
+}
+
+.artist-name {
+    font-size: .85rem;
+    opacity: .55;
+    margin-top: 2px;
+}
+
+.map-hint {
+    font-size: .78rem;
+    opacity: .3;
+    letter-spacing: .5px;
+}
