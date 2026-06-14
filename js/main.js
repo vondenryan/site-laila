@@ -8,33 +8,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Aceita open.spotify.com/track/ID ou /embed/track/ID
     // ════════════════════════════════════════════════
     const musicByState = {
-        BRAC: { name: "Acre",               flag: "🌳", song: "Aquarela do Brasil",      artist: "Gal Costa",              color: "#34d399", spotifyEmbed: null },
-        BRAL: { name: "Alagoas",            flag: "🎵", song: "De Onde Vem o Baião",     artist: "Luiz Gonzaga",           color: "#fb923c", spotifyEmbed: null },
-        BRAM: { name: "Amazonas",           flag: "🌿", song: "Aquarela",                artist: "Toquinho",               color: "#34d399", spotifyEmbed: null },
-        BRAP: { name: "Amapá",              flag: "🌊", song: "Carimbó",                 artist: "Mestre Cupijó",          color: "#2dd4bf", spotifyEmbed: null },
-        BRBA: { name: "Bahia",              flag: "🌊", song: "Aquarela do Brasil",      artist: "Gal Costa",              color: "#ff5c8a", spotifyEmbed: null },
-        BRCE: { name: "Ceará",              flag: "🌵", song: "Asa Branca",              artist: "Luiz Gonzaga",           color: "#f97316", spotifyEmbed: null },
-        BRDF: { name: "Brasília (DF)",      flag: "🏛️", song: "Brasília Invisível",      artist: "Skank",                  color: "#c084fc", spotifyEmbed: null },
-        BRES: { name: "Espírito Santo",     flag: "🌺", song: "Maria Fumaça",            artist: "Banda Black Rio",        color: "#f43f5e", spotifyEmbed: null },
-        BRGO: { name: "Goiás",              flag: "🎸", song: "Evidências",              artist: "Chitãozinho & Xororó",   color: "#fbbf24", spotifyEmbed: null },
-        BRMA: { name: "Maranhão",           flag: "🪘", song: "Dança do Coco",           artist: "Tradicional",            color: "#f43f5e", spotifyEmbed: null },
-        BRMG: { name: "Minas Gerais",       flag: "⛰️", song: "Tocando em Frente",       artist: "Almir Sater",            color: "#ffcc66", spotifyEmbed: null },
-        BRMS: { name: "Mato Grosso do Sul", flag: "🌾", song: "Saudade do Matão",        artist: "Almir Sater",            color: "#a3e635", spotifyEmbed: null },
-        BRMT: { name: "Mato Grosso",        flag: "🌅", song: "Chalana",                 artist: "Almir Sater",            color: "#fbbf24", spotifyEmbed: null },
-        BRPA: { name: "Pará",               flag: "🎶", song: "Carimbó",                 artist: "Mestre Cupijó",          color: "#2dd4bf", spotifyEmbed: null },
-        BRPB: { name: "Paraíba",            flag: "🎺", song: "Lamento Sertanejo",       artist: "Dominguinhos",           color: "#f97316", spotifyEmbed: null },
-        BRPE: { name: "Pernambuco",         flag: "🥁", song: "O Leão do Norte",         artist: "Alcymar Monteiro",       color: "#e879f9", spotifyEmbed: null },
-        BRPI: { name: "Piauí",              flag: "🌵", song: "Asa Branca",              artist: "Luiz Gonzaga",           color: "#fb923c", spotifyEmbed: null },
-        BRPR: { name: "Paraná",             flag: "🌲", song: "Curitiba em Mim",         artist: "Yamandú Costa",          color: "#a3e635", spotifyEmbed: null },
-        BRRJ: { name: "Rio de Janeiro",     flag: "🏖️", song: "Chega de Saudade",        artist: "João Gilberto",          color: "#1db954", spotifyEmbed: null },
-        BRRN: { name: "Rio Grande do Norte",flag: "☀️", song: "Xote das Meninas",        artist: "Luiz Gonzaga",           color: "#fbbf24", spotifyEmbed: "https://open.spotify.com/embed/track/0PSVwGOWfSWJBKymcjAtLk" },
-        BRRO: { name: "Rondônia",           flag: "🌿", song: "Aquarela",                artist: "Toquinho",               color: "#34d399", spotifyEmbed: null },
-        BRRR: { name: "Roraima",            flag: "🌄", song: "Aquarela",                artist: "Toquinho",               color: "#60a5fa", spotifyEmbed: null },
-        BRRS: { name: "Rio Grande do Sul",  flag: "🌿", song: "Trem das Onze",           artist: "Adoniran Barbosa",       color: "#8e7dff", spotifyEmbed: null },
-        BRSC: { name: "Santa Catarina",     flag: "🏔️", song: "Peixe Vivo",              artist: "Tradicional",            color: "#60a5fa", spotifyEmbed: null },
-        BRSE: { name: "Sergipe",            flag: "🎵", song: "De Onde Vem o Baião",     artist: "Luiz Gonzaga",           color: "#fb923c", spotifyEmbed: null },
-        BRSP: { name: "São Paulo",          flag: "🏙️", song: "Oração",                  artist: "A Banda Mais Bonita",    color: "#00c2ff", spotifyEmbed: null },
-        BRTO: { name: "Tocantins",          flag: "🌾", song: "Chalana",                 artist: "Almir Sater",            color: "#fbbf24", spotifyEmbed: null },
+        BRAC: { name: "Acre",                flag: "🌳", song: "Something - Remastered 2009",          artist: "The Beatles",               color: "#34d399", preview: "https://p.scdn.co/mp3-preview/104949214901a426c39555215ec79d8a30d6d905", spotifyEmbed: "https://open.spotify.com/embed/track/0pNeVovbiZHkulpGeOx1Gj" },
+        BRAL: { name: "Alagoas",             flag: "🎵", song: "Se...",                                 artist: "Djavan",                    color: "#fb923c", preview: "https://p.scdn.co/mp3-preview/e683be2df46e1c97720559050cffac77c11494a8", spotifyEmbed: "https://open.spotify.com/embed/track/0PgsB53yhlKs8D19LgYU4i" },
+        BRAM: { name: "Amazonas",            flag: "🌿", song: "Vilarejo - Ao Vivo",                    artist: "Tribalistas",               color: "#34d399", preview: "https://p.scdn.co/mp3-preview/168f7b0092e6e9b7d99f82a95b43577f16de3a6c", spotifyEmbed: "https://open.spotify.com/embed/track/0pWG2AKckt7Rcy9JGr4oLq" },
+        BRAP: { name: "Amapá",               flag: "🌊", song: "Exagerado",                             artist: "Cazuza",                    color: "#2dd4bf", preview: "https://p.scdn.co/mp3-preview/fe7cb86b056e2ca805f8c31d369d1e583469d3c6", spotifyEmbed: "https://open.spotify.com/embed/track/4d0DpU7Odiv0ztvX2GxJlk" },
+        BRBA: { name: "Bahia",               flag: "🌊", song: "Aquele Abraço",                         artist: "Gilberto Gil",              color: "#ff5c8a", preview: "https://p.scdn.co/mp3-preview/0599af45cb3b68642151db0083ab7c24b522d7d3", spotifyEmbed: "https://open.spotify.com/embed/track/7CjSjWTdVPD0ov82Qz55Xb" },
+        BRCE: { name: "Ceará",               flag: "🌵", song: "Lilás",                                 artist: "Djavan",                    color: "#f97316", preview: "https://p.scdn.co/mp3-preview/6a4e1a8614ef77a1cb8dcd2c573549bf4b972803", spotifyEmbed: "https://open.spotify.com/embed/track/0V0DEGw7N5KlubvARp4VOm" },
+        BRDF: { name: "Brasília (DF)",       flag: "🏛️", song: "Tempo Perdido",                         artist: "Legião Urbana",             color: "#c084fc", preview: "https://p.scdn.co/mp3-preview/f4da817032001471ba40cfd9f112b737e28d062c", spotifyEmbed: "https://open.spotify.com/embed/track/7MnT7msJZg3XBAS0OTfGrB" },
+        BRES: { name: "Espírito Santo",      flag: "🌺", song: "O Sol",                                 artist: "Jota Quest",                color: "#f43f5e", preview: "https://p.scdn.co/mp3-preview/4847ca1734498f3002bac3d7028f5b6283d9d188", spotifyEmbed: "https://open.spotify.com/embed/track/0v1fLMHpMqsh6AiAGQ9Dam" },
+        BRGO: { name: "Goiás",               flag: "🎸", song: "Por Onde Andei - Ao Vivo",              artist: "Nando Reis",                color: "#fbbf24", preview: "https://p.scdn.co/mp3-preview/1b46f0ef48aded0a84a39b96917075c3c07eb82e", spotifyEmbed: "https://open.spotify.com/embed/track/4CpwoEs39CydHJuTCl9kfm" },
+        BRMA: { name: "Maranhão",            flag: "🪘", song: "Pisando Descalço",                      artist: "Maneva",                    color: "#f43f5e", preview: "https://p.scdn.co/mp3-preview/65824dc20b64f18898557459595f2a799c2898f1", spotifyEmbed: "https://open.spotify.com/embed/track/4wsQ8QosIoFCIeLuGUPtDW" },
+        BRMG: { name: "Minas Gerais",        flag: "⛰️", song: "Flor de Lis",                           artist: "Djavan",                    color: "#ffcc66", preview: "https://p.scdn.co/mp3-preview/e19e8fb40d097bd63cdfbf509c03a959eff1e6da", spotifyEmbed: "https://open.spotify.com/embed/track/1dociHCC4kVIaZu4Sg9ip6" },
+        BRMS: { name: "Mato Grosso do Sul",  flag: "🌾", song: "Aonde Quer Que Eu Vá",                  artist: "Os Paralamas Do Sucesso",   color: "#a3e635", preview: "https://p.scdn.co/mp3-preview/4a43ae9f81332f9ecc4a62f703c8361a9c4bd855", spotifyEmbed: "https://open.spotify.com/embed/track/0NFVg74sSsdU1gNc9xfpIO" },
+        BRMT: { name: "Mato Grosso",         flag: "🌅", song: "Mamma Mia",                             artist: "ABBA",                      color: "#fbbf24", preview: "https://p.scdn.co/mp3-preview/b578f8867804a1545b49ef6aea52bd0b8ec766d4", spotifyEmbed: "https://open.spotify.com/embed/track/2TxCwUlqaOH3TIyJqGgR91" },
+        BRPA: { name: "Pará",                flag: "🎶", song: "Não Quero Dinheiro (Só Quero Amar)",    artist: "Tim Maia",                  color: "#2dd4bf", preview: "https://p.scdn.co/mp3-preview/99f42f32e9e19b0d63b436fb270956aa952c7776", spotifyEmbed: "https://open.spotify.com/embed/track/0SfcG65T1KKCj5NQffpzQR" },
+        BRPB: { name: "Paraíba",             flag: "🎺", song: "Sina",                                  artist: "Djavan",                    color: "#f97316", preview: "https://p.scdn.co/mp3-preview/172251ef4372f7eb2c445e24820f0d3aecc17e04", spotifyEmbed: "https://open.spotify.com/embed/track/5gQeBRDlFEreoxtojHnzn1" },
+        BRPE: { name: "Pernambuco",          flag: "🥁", song: "Relicário - Ao Vivo",                   artist: "Cássia Eller, Nando Reis",  color: "#e879f9", preview: "https://p.scdn.co/mp3-preview/c672e1683700134a42322dc408cc0a571f792f5d", spotifyEmbed: "https://open.spotify.com/embed/track/6HhXiy5XZ81Pyv3yCZMtj1" },
+        BRPI: { name: "Piauí",               flag: "🌵", song: "Vamos Fugir",                           artist: "Skank",                     color: "#fb923c", preview: "https://p.scdn.co/mp3-preview/6ceebfdfe2820d77703bcda17c9ac0485924a169", spotifyEmbed: "https://open.spotify.com/embed/track/7dxK6RSoCWZcb5gobxs1h9" },
+        BRPR: { name: "Paraná",              flag: "🌲", song: "Como Tudo Deve Ser",                    artist: "Charlie Brown Jr.",         color: "#a3e635", preview: "https://p.scdn.co/mp3-preview/4f3eea4de1f41ee68a4f1c00093db11ba99ab1b1", spotifyEmbed: "https://open.spotify.com/embed/track/3QI5bIozef0HZ1kJnA2RdT" },
+        BRRJ: { name: "Rio de Janeiro",      flag: "🏖️", song: "Amiga da Minha Mulher",                 artist: "Seu Jorge",                 color: "#1db954", preview: "https://p.scdn.co/mp3-preview/6be44b508ca653b8aa7193cd9b063dede19f7e87", spotifyEmbed: "https://open.spotify.com/embed/track/5nh2T9qvyXZCvVVYYESeRW" },
+        BRRN: { name: "Rio Grande do Norte", flag: "☀️", song: "O Sol",                                 artist: "Vitor Kley",                color: "#fbbf24", preview: "https://p.scdn.co/mp3-preview/5acd088a19d058da046e2898a228d2bff6579434", spotifyEmbed: "https://open.spotify.com/embed/track/1j5N75y26nH2l0uPa9JlKe" },
+        BRRO: { name: "Rondônia",            flag: "🌿", song: "Proibida Pra Mim (Grazon)",             artist: "Charlie Brown Jr.",         color: "#34d399", preview: "https://p.scdn.co/mp3-preview/02e097e967ba7a9ba1cd36a815451440c21d8c57", spotifyEmbed: "https://open.spotify.com/embed/track/5HOkVB35cz5nK6ZeRj0xM6" },
+        BRRR: { name: "Roraima",             flag: "🌄", song: "Here Comes The Sun - Remastered 2009",  artist: "The Beatles",               color: "#60a5fa", preview: "https://p.scdn.co/mp3-preview/c92aa1522f4d342468892d77a4e55e27356aa295", spotifyEmbed: "https://open.spotify.com/embed/track/6dGnYIeXmHdcikdzNNDMm2" },
+        BRRS: { name: "Rio Grande do Sul",   flag: "🌿", song: "Sol Loiro",                             artist: "Armandinho",                color: "#8e7dff", preview: "https://p.scdn.co/mp3-preview/9fe79bc39823d84e3d0cf6da82e37b3b6fea57f1", spotifyEmbed: "https://open.spotify.com/embed/track/679bhkmbKtkLaBd9CfSQH8" },
+        BRSC: { name: "Santa Catarina",      flag: "🏔️", song: "Analua",                                artist: "Armandinho",                color: "#60a5fa", preview: "https://p.scdn.co/mp3-preview/d8d768455f615e8b1671a73720816b1fe07aa2d6", spotifyEmbed: "https://open.spotify.com/embed/track/1gJJghkaqrRTk9WwmyEwyd" },
+        BRSE: { name: "Sergipe",             flag: "🎵", song: "Sutilmente",                            artist: "Skank",                     color: "#fb923c", preview: "https://p.scdn.co/mp3-preview/034ce8cf84b1c8ec7ee593609809a4b028b65b19", spotifyEmbed: "https://open.spotify.com/embed/track/4pG8lbKPKkfGSniMXxZTM7" },
+        BRSP: { name: "São Paulo",           flag: "🏙️", song: "Dona do Meu Pensamento",                artist: "Charlie Brown Jr.",         color: "#00c2ff", preview: "https://p.scdn.co/mp3-preview/bf482da711892c02160df2e9c709b45fe7301533", spotifyEmbed: "https://open.spotify.com/embed/track/3EBtHRt4uSSFhNladqH3UP" },
+        BRTO: { name: "Tocantins",           flag: "🌾", song: "O Vagabundo e a Dama",                  artist: "Oriente",                   color: "#fbbf24", preview: "https://p.scdn.co/mp3-preview/ce2ec6212a595eb0387a9da57a5c589d1c4b5759", spotifyEmbed: "https://open.spotify.com/embed/track/7MQJYm0QPF2Vf0UtzKapSc" },
     };
 
     // ════════════════════════════════════════════════
@@ -225,7 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function playStateAudio(id) {
-        mapCrossfadeTo(`./assets/musics/${id}.mp3`);
+        const url = musicByState[id]?.preview;
+        if (url) mapCrossfadeTo(url);
+        else mapFadeOutAll();
     }
 
     function stopAudio() {
@@ -233,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // ──────────────────────────────────────────────────────────
 
-    fetch("https://vondenryan.github.io/site-laila/assets/images/brasil.svg")
+    fetch("/assets/images/brasil.svg")
         .then(r => r.text())
         .then(svgText => {
             const parser = new DOMParser();
@@ -345,22 +347,22 @@ document.addEventListener("DOMContentLoaded", () => {
     //           deixe null se não quiser áudio nesse slide.
     const journeySongs = [
         {
-            song:     "Chega de Saudade",
-            artist:   "João Gilberto",
-            text:     "Tem músicas que a gente não escolhe. Elas simplesmente aparecem no momento certo e ficam.",
-            audioSrc: "./assets/musics/BRRJ.mp3",
+            song:     "Pela Luz dos Olhos Teus",
+            artist:   "Miúcha, Antônio Carlos Jobim",
+            text:     "",
+            audioSrc: "https://p.scdn.co/mp3-preview/1e4c088009e9152e80a303192de90abcd2d101b0",
         },
         {
-            song:     "Tocando em Frente",
-            artist:   "Almir Sater",
-            text:     "Cada lugar que você passou deixou um acorde diferente em você. Isso não tem nome — mas tem melodia.",
-            audioSrc: "./assets/musics/BRMG.mp3",
+            song:     "Billie Jean",
+            artist:   "Michael Jackson",
+            text:     "",
+            audioSrc: "https://p.scdn.co/mp3-preview/84c7d8302cebe916b8a02392ece9b2c72ce95d34",
         },
         {
-            song:     "Oração",
-            artist:   "A Banda Mais Bonita da Cidade",
-            text:     "E no final, o que fica não é o lugar. É a sensação de ter estado lá com as pessoas certas.",
-            audioSrc: "./assets/musics/BRSP.mp3",
+            song:     "Dona do Meu Pensamento",
+            artist:   "Charlie Brown Jr.",
+            text:     "",
+            audioSrc: "https://p.scdn.co/mp3-preview/bf482da711892c02160df2e9c709b45fe7301533",
         },
     ];
     // ─────────────────────────────────────────────────
@@ -529,21 +531,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-});
-
-const isMobile = window.innerWidth < 768;
-
-const gate = document.getElementById("mobile-gate");
-const desktopBtn = document.getElementById("desktop-btn");
-const continueBtn = document.getElementById("continue-btn");
-
-if (isMobile) {
-    gate.classList.add("show");
-}
-
-desktopBtn.addEventListener("click", () => {
-
-    document.body.classList.add("force-desktop");
-
-    gate.classList.remove("show");
 });

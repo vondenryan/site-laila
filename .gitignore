@@ -1,0 +1,5 @@
+referencias
+venv
+*.py
+*.json
+*.cache
