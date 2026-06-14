@@ -13,6 +13,68 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.mobile-gate{
+    position:fixed;
+    inset:0;
+
+    background:#0b0b0b;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.mobile-gate.show{
+    display:flex;
+}
+
+.mobile-gate-content{
+    max-width:500px;
+    padding:40px;
+    text-align:center;
+}
+
+.mobile-gate h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.mobile-gate p{
+    color:rgba(255,255,255,.7);
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.mobile-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.mobile-buttons button{
+    border:none;
+    cursor:pointer;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    font-size:1rem;
+}
+
+#desktop-btn{
+    background:#1db954;
+    color:white;
+}
+
+#continue-btn{
+    background:#222;
+    color:white;
+}
+
 /* ── HERO ── */
 .hero {
     height: 100vh;

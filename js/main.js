@@ -530,3 +530,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const isMobile = window.innerWidth < 768;
+
+const gate = document.getElementById("mobile-gate");
+const desktopBtn = document.getElementById("desktop-btn");
+const continueBtn = document.getElementById("continue-btn");
+
+if (isMobile) {
+    gate.classList.add("show");
+}
+
+desktopBtn.addEventListener("click", () => {
+
+    document.body.classList.add("force-desktop");
+
+    gate.classList.remove("show");
+});
