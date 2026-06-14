@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let activeEl = null;
 
-    fetch("/assets/images/brasil.svg")
+    fetch("./assets/images/brasil.svg")
         .then(r => r.text())
         .then(svgText => {
             const parser = new DOMParser();
