@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // ──────────────────────────────────────────────────────────
 
-    fetch("./assets/images/brasil.svg")
+    fetch("https://vondenryan.github.io/site-laila/assets/images/brasil.svg")
         .then(r => r.text())
         .then(svgText => {
             const parser = new DOMParser();
