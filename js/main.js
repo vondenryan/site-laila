@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function playStateAudio(id) {
-        mapCrossfadeTo(`assets/musics/${id}.mp3`);
+        mapCrossfadeTo(`./assets/musics/${id}.mp3`);
     }
 
     function stopAudio() {
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // ──────────────────────────────────────────────────────────
 
-    fetch("assets/images/brasil.svg")
+    fetch("./assets/images/brasil.svg")
         .then(r => r.text())
         .then(svgText => {
             const parser = new DOMParser();
@@ -348,19 +348,19 @@ document.addEventListener("DOMContentLoaded", () => {
             song:     "Chega de Saudade",
             artist:   "João Gilberto",
             text:     "Tem músicas que a gente não escolhe. Elas simplesmente aparecem no momento certo e ficam.",
-            audioSrc: "assets/musics/BRRJ.mp3",
+            audioSrc: "./assets/musics/BRRJ.mp3",
         },
         {
             song:     "Tocando em Frente",
             artist:   "Almir Sater",
             text:     "Cada lugar que você passou deixou um acorde diferente em você. Isso não tem nome — mas tem melodia.",
-            audioSrc: "assets/musics/BRMG.mp3",
+            audioSrc: "./assets/musics/BRMG.mp3",
         },
         {
             song:     "Oração",
             artist:   "A Banda Mais Bonita da Cidade",
             text:     "E no final, o que fica não é o lugar. É a sensação de ter estado lá com as pessoas certas.",
-            audioSrc: "assets/musics/BRSP.mp3",
+            audioSrc: "./assets/musics/BRSP.mp3",
         },
     ];
     // ─────────────────────────────────────────────────
