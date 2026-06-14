@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // ──────────────────────────────────────────────────────────
 
-    fetch("/assets/images/brasil.svg")
+    fetch("https://vondenryan.github.io/site-laila/assets/images/brasil.svg")
         .then(r => r.text())
         .then(svgText => {
             const parser = new DOMParser();
@@ -349,19 +349,19 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             song:     "Pela Luz dos Olhos Teus",
             artist:   "Miúcha, Antônio Carlos Jobim",
-            text:     "",
+            text:     "Algumas músicas não são só favoritas. São quase parte de quem você é.",
             audioSrc: "https://p.scdn.co/mp3-preview/1e4c088009e9152e80a303192de90abcd2d101b0",
         },
         {
             song:     "Billie Jean",
             artist:   "Michael Jackson",
-            text:     "",
+            text:     "E às vezes você surpreende. Porque seu gosto vai muito além do esperado.",
             audioSrc: "https://p.scdn.co/mp3-preview/84c7d8302cebe916b8a02392ece9b2c72ce95d34",
         },
         {
             song:     "Dona do Meu Pensamento",
             artist:   "Charlie Brown Jr.",
-            text:     "",
+            text:     "E no fim, algumas músicas não explicam nada. Só deixam tudo mais claro.",
             audioSrc: "https://p.scdn.co/mp3-preview/bf482da711892c02160df2e9c709b45fe7301533",
         },
     ];
