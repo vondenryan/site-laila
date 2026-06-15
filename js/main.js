@@ -561,7 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // — Música de fundo da seção playlist —
-    const playlistAudioSrc = "./assets/musics/playlist-ambient.mp3"; // substituir pelo nome real do arquivo
+    const playlistAudioSrc = "./assets/musics/playlist-ambient.MP3"; // substituir pelo nome real do arquivo
     const playlistPlayer = new Audio();
     playlistPlayer.src = playlistAudioSrc;
     playlistPlayer.loop = true;
