@@ -138,6 +138,35 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: { trigger: ".map-section", start: "top 80%" }
     });
 
+    // — Deseleciona estado e para áudio ao sair da seção do mapa —
+    ScrollTrigger.create({
+        trigger: ".map-section",
+        start: "top top",
+        end: "bottom bottom",
+        onLeave: () => {
+            if (activeEl) {
+                activeEl.classList.remove("active");
+                activeEl.style.fill = "";
+                activeEl.style.filter = "";
+                activeEl = null;
+            }
+            infoPanel.classList.remove("visible");
+            setSpotify(null);
+            mapFadeOutAll();
+        },
+        onLeaveBack: () => {
+            if (activeEl) {
+                activeEl.classList.remove("active");
+                activeEl.style.fill = "";
+                activeEl.style.filter = "";
+                activeEl = null;
+            }
+            infoPanel.classList.remove("visible");
+            setSpotify(null);
+            mapFadeOutAll();
+        }
+    });
+
     // ════════════════════════════════════════════════
     // MAPA
     // ════════════════════════════════════════════════
@@ -529,6 +558,62 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: ".playlist-section",
             start: "top 70%",
         }
+    });
+
+    // — Música de fundo da seção playlist —
+    const playlistAudioSrc = "./assets/musics/playlist-ambient.mp3"; // substituir pelo nome real do arquivo
+    const playlistPlayer = new Audio();
+    playlistPlayer.src = playlistAudioSrc;
+    playlistPlayer.loop = true;
+    playlistPlayer.volume = 0;
+    let playlistFadeInterval = null;
+
+    function playlistFadeIn() {
+        if (playlistFadeInterval) clearInterval(playlistFadeInterval);
+        playlistPlayer.play().catch(() => {});
+        const steps = 20;
+        let step = 0;
+        const target = 0.05;
+        playlistFadeInterval = setInterval(() => {
+            step++;
+            playlistPlayer.volume = Math.min(target, target * (step / steps));
+            if (step >= steps) { clearInterval(playlistFadeInterval); playlistFadeInterval = null; }
+        }, 40);
+    }
+
+    function playlistFadeOut() {
+        if (playlistFadeInterval) clearInterval(playlistFadeInterval);
+        const start = playlistPlayer.volume;
+        if (start === 0) return;
+        let step = 0;
+        playlistFadeInterval = setInterval(() => {
+            step++;
+            playlistPlayer.volume = Math.max(0, start * (1 - step / 20));
+            if (step >= 20) {
+                clearInterval(playlistFadeInterval);
+                playlistFadeInterval = null;
+                playlistPlayer.pause();
+                playlistPlayer.volume = 0;
+            }
+        }, 40);
+    }
+
+    // playlistAudioSrc ja definido acima como assets/musics/playlist-ambient.mp3
+    // Começa quando chega na playlist — não para nunca pelo scroll
+    ScrollTrigger.create({
+        trigger: ".playlist-section",
+        start: "top 80%",
+        once: true,
+        onEnter: () => playlistFadeIn(),
+    });
+
+    // Para a playlist quando o usuário volta pro journey
+    ScrollTrigger.create({
+        trigger: "#journey-section",
+        start: "top top",
+        end: "bottom bottom",
+        onEnter: () => playlistFadeOut(),
+        onEnterBack: () => playlistFadeOut(),
     });
 
 });
